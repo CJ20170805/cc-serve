@@ -3,14 +3,14 @@ var router = express.Router();
 const mongoose = require('mongoose');
 
 // mongoose connect
-mongoose.connect('mongodb://localhost:27017/admin', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost:27017/admin', {useNewUrlParser: true});
 
-// connect infos
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log('connect successful!=users');
-});
+// // connect infos
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function() {
+//   console.log('connect successful!=users');
+// });
 
 // define schema
 // let userSchema = mongoose.Schema({
@@ -59,11 +59,11 @@ db.once('open', function() {
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  // res.status(200).send('respond with a resource');
-  User.find((err,data)=>{
-    if(err) return;
-    res.json(data);
-  })
+  res.status(200).send('respond with a resource');
+  // User.find((err,data)=>{
+  //   if(err) return;
+  //   res.json(data);
+  // })
 });
 
 module.exports = router;

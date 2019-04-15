@@ -9,7 +9,7 @@ try{
 }
 
 // const database = require('../config/database');
-mongoose.connect("mongodb://localhost:27017/users", {useNewUrlParser: true, autoIndex: false});
+mongoose.connect("mongodb://localhost:27017/admin", {useNewUrlParser: true, autoIndex: false});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
