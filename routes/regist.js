@@ -40,7 +40,7 @@ function encrypt (str) {
 
 router.post('/',(req,res)=>{
   // res.end('regissss');
-  // console.log(req);
+  console.log(req.body);
   let username = req.query.un;
   let password = encrypt(req.query.pw);
   
